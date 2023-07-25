@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat, sans-serif;
+}
+
+/* Folosit pentru a declara variabile globale */
+:root {
+  --light-blue: #1c9eff;
+  --dark-blue: #007ad6;
+  --btn-yellow: #ffd01a;
+  --btn-hover-yellow: #efb10a;
+  --btn-active-yellow: #e8a200;
+  --light-grey: #f2f2f2;
+  --grey: #a0a0a0;
+  --pink: #ff9eaa;
+  --white: #fff;
+}
+
+.card .banner {
+  background: url("https://images.pexels.com/photos/2726046/pexels-photo-2726046.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  height: 200px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+}
+.banner .imgBox {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid var(--white);
+  position: absolute;
+  bottom: -70px;
+  box-shadow: 0 4px 15px black;
+  z-index: 1;
+}
+.banner .imgBox:hover {
+  transform: scale(1.1);
+}
+.imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom right, var(--white), var(--pink));
+}
+.card {
+  background-color: var(--white);
+  width: 360px;
+  margin-top: 32px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px;
+}
+.card-body {
+  padding: 70px 30px 20px;
+  position: relative;
+}
+.name,
+.title {
+  text-align: center;
+  margin: 8px 0;
+}
+.name {
+  margin-top: 16px;
+}
+.title {
+  color: grey;
+  font-size: 14px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+}
+.follow-info {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 16px 0;
+}
+.follow-info h2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--light-blue);
+  width: 50%;
+}
+.follow-info h2:hover {
+  background-color: var(--light-grey);
+  color: var(--dark-blue);
+  cursor: pointer;
+}
+.follow-info h2 small {
+  font-size: 12px;
+  color: var(--grey);
+  font-weight: normal;
+}
+.actions button {
+  border-radius: 24px;
+  background-color: var(--btn-yellow);
+  font-weight: bold;
+  font-size: 20px;
+  padding: 12px;
+  border: none;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: scale 2000ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.actions button:active {
+  background-color: var(--btn-active-yellow);
+  transform: scale(1.05);
+}
+
+.action button:hover {
+  background-color: var(--btn-hover-yellow);
+}
+.description {
+  color: var(--grey);
+  letter-spacing: 1px;
+  text-align: justify;
+}
+.menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu:hover {
+  background-color: var(--light-grey);
+  cursor: pointer;
+  border-radius: 24px;
+}
